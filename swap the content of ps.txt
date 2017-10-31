@@ -1,0 +1,23 @@
+ //WPR045A  JOB 123,BP,NOTIFY=WPR045,CLASS=A      
+ //STEP1    EXEC PGM=IEBGENER                     
+ //SYSUT1   DD DSN=WPR045.OCT23.JCLPGM2,          
+ //         DISP=(OLD,CATLG,CATLG)                
+ //SYSUT2   DD DSN=&&TEMP,                        
+ //         DISP=(NEW,CATLG,CATLG),               
+ //         SPACE=(TRK,(1,1))                     
+ //SYSIN    DD DUMMY                              
+ //SYSPRINT DD SYSOUT=*                           
+ //STEP2    EXEC PGM=IEBGENER                     
+ //SYSUT1   DD DSN=WPR045.OCT23.TEST2,            
+ //         DISP=(OLD,CATLG,CATLG)                
+ //SYSUT2   DD DSN=WPR045.OCT23.JCLPGM2,          
+ //         DISP=(OLD,CATLG,CATLG)                
+ //SYSIN    DD DUMMY                              
+ //SYSPRINT DD SYSOUT=*   
+ //STEP3    EXEC PGM=IEBGENER          
+ //SYSUT1   DD DSN=&&TEMP,             
+ //         DISP=(OLD,CATLG,CATLG)     
+ //SYSUT2   DD DSN=WPR045.OCT23.TEST2, 
+ //         DISP=(OLD,CATLG,CATLG)     
+ //SYSIN    DD DUMMY                   
+ //SYSPRINT DD SYSOUT=*                                        

@@ -1,0 +1,8 @@
+//WPR045A  JOB 123,BP,NOTIFY=WPR045,CLASS=A      
+//STEP1    EXEC PGM=IEBCOPY                      
+//SYSUT1   DD DSN=WPR045.OCT23.JCLPGM,           
+//         DISP=(OLD,CATLG,CATLG)                
+//SYSUT1   DD DSN=WPR045.OCT23.JCLPGM1,          
+//         DISP=(OLD,CATLG,CATLG)                
+//SYSIN    DD DUMMY                              
+//SYSPRINT DD SYSOUT=*                           
