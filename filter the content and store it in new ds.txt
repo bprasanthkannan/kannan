@@ -1,0 +1,14 @@
+//WPR045A JOB 12,BP,NOTIFY=WPR045,CLASS=A      
+//STEP1   EXEC PGM=SORT                        
+//SORTIN  DD DSN=WPR045.OCT23.JCLPGM52,        
+//        DISP=(OLD,CATLG,UNCATLG)             
+//SORTOF1 DD DSN=WPR045.OCT23.JCLPGM53,        
+//        DISP=(OLD,CATLG,UNCATLG)             
+//SORTOF2 DD DSN=WPR045.OCT23.TEST2,           
+//        DISP=(OLD,CATLG,UNCATLG)             
+//SYSIN   DD *                                 
+  SORT FIELDS=COPY                             
+  OUTFIL FILES=1,INCLUDE=(4,4,CH,EQ,C'MAIN')   
+  OUTFIL FILES=2,INCLUDE=(4,4,CH,EQ,C'TELE')   
+/*                                             
+//SYSOUT  DD SYSOUT=*                          

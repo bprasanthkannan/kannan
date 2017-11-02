@@ -1,0 +1,10 @@
+ //WPR045A  JOB 123,BP,NOTIFY=WPR045,CLASS=A  
+ //STEP1    EXEC PGM=SORT                     
+ //SORTIN   DD DSN=WPR045.OCT23.JCLPGM52,     
+ //         DISP=(OLD,CATLG,CATLG)            
+ //SORTOUT  DD DSN=WPR045.OCT23.TEST2,        
+ //         DISP=(OLD,CATLG,UNCATLG)          
+ //SYSOUT   DD SYSOUT=*                       
+ //SYSIN    DD *                              
+   SORT FIELDS=(3,6,CH,A,1,2,CH,D)            
+ /*                                           

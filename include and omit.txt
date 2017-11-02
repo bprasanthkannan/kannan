@@ -1,0 +1,19 @@
+ //WPR045A JOB 123,BP,NOTIFY=WPR045,CLASS=A      
+ //STEP1   EXEC PGM=SORT                         
+ //SORTIN  DD DSN=WPR045.OCT23.JCLPGM52,         
+ //          DISP=(OLD,CATLG,UNCATLG)            
+ //SORTOUT DD DSN=WPR045.OCT23.JCLPGM53,         
+ //          DISP=(OLD,CATLG,UNCATLG)            
+ //SYSOUT  DD SYSOUT=*                           
+ //SYSIN   DD *                                  
+   SORT FIELDS=(1,1,CH,D)                        
+   OMIT COND=(4,4,CH,EQ,C'MAIN')                 
+ /*   
+
+
+
+for coping particular field from ds
+
+use the following
+
+include cond=(   )                                           

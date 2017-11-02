@@ -1,0 +1,12 @@
+//WPR045A  JOB 12,BP,NOTIFY=&SYSUID,CLASS=A      
+//STEP1    EXEC PGM=SORT                         
+//SORTIN1  DD DSN=WPR045.OCT23.JCLPGM52,         
+//         DISP=(OLD,CATLG,UNCATLG)              
+//SORTIN2  DD DSN=WPR045.OCT23.JCLPGM53,         
+//         DISP=(OLD,CATLG,UNCATLG)              
+//SORTOUT  DD DSN=WPR045.OCT23.TEST2,            
+//         DISP=(OLD,CATLG,UNCATLG)              
+//SYSIN    DD *                                  
+  MERGE FIELDS=(1,2,CH,A)                        
+/*                                               
+//SYSOUT   DD SYSOUT=*                           
