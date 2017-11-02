@@ -1,0 +1,22 @@
+//WPR045A JOB 123,BP,NOTIFY=WPR045,CLASS=A                              
+//MYJCL1  JCLLIB ORDER=(WPR045.OCT23.JCLPGM4)                           
+//STEP1   EXEC PROC2,A=WPR045.OCT23.JCLPGM52,B=WPR045.OCT23.TEST2       
+//SYSIN   DD DUMMY                                                      
+//SYSPRINT DD SYSOUT=*                                                  
+//*MYJCL2  JCLLIB ORDER=(WPR045.OCT23.JCLPGM4)                          
+//STEP2   EXEC PROC2,A=WPR045.OCT23.JCLPGM53,B=WPR045.OCT23.JCLPGM52    
+//SYSIN   DD DUMMY                                                      
+//SYSPRINT DD SYSOUT=*                                                  
+//*MYJCL3  JCLLIB ORDER=(WPR045.OCT23.JCLPGM4)                          
+//STEP3   EXEC PROC2,A=WPR045.OCT23.TEST2,B=WPR045.OCT23.JCLPGM52       
+//SYSIN    DD DUMMY                                                     
+//SYSPRINT DD SYSOUT=*                                                  
+
+
+
+ //PROC2   PROC                         
+ //STEP1   EXEC PGM=IEBGENER            
+ //SYSUT1  DD DSN=&A,                   
+ //        DISP=(OLD,CATLG,CATLG)       
+ //SYSUT2  DD DSN=&B,                   
+ //        DISP=(OLD,CATLG,CATLG)       

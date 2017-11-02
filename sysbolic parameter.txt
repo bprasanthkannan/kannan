@@ -1,0 +1,15 @@
+ //WPR045A  JOB WPR045,BP,NOTIFY=&SYSUID,CLASS=A                         
+ //MYJCL    JCLLIB ORDER=(WPR045.OCT23.JCLPGM4)                          
+ //STEP1    EXEC PROC1,A=WPR045.OCT23.JCLPGM52,B=WPR045.OCT23.JCLPGM53   
+ //SYSIN    DD DUMMY                                                     
+ //SYSPRINT DD SYSOUT=*       
+
+
+ //PROC1    PROC                              
+ //STEP1    EXEC PGM=IEBGENER                 
+ //SYSUT1   DD DSN=&A,                        
+ //         DISP=(OLD,CATLG,UNCATLG)          
+ //SYSUT2  DD DSN=&B,                         
+ //         DISP=(OLD,CATLG,UNCATLG)          
+
+                                           
