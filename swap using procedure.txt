@@ -20,3 +20,7 @@
  //        DISP=(OLD,CATLG,CATLG)       
  //SYSUT2  DD DSN=&B,                   
  //        DISP=(OLD,CATLG,CATLG)       
+ 
+ 
+ best way is to include the temp ds in the procedure and swap the file 
+ return the file to calling procedure
