@@ -1,0 +1,33 @@
+
+          
+ 000100 //WPR036A  JOB  1234,MAGI,CLASS=A,NOTIFY=WPR036,                        
+ 000200 //           MSGCLASS=A                                                 
+ 000400 //STEP1    EXEC PGM=IEBGENER                                            
+ 000500 //SYSUT1   DD   DSN=WPR036.OCT23.PS4(-1),                               
+ 000600 //        DISP=(OLD,CATLG,CATLG)                                        
+ 000810 //SYSUT2  DD   DSN=WPR036.OCT23.PS4(+1),                                
+ 000820 //         DISP=(NEW,CATLG,CATLG),                                      
+ 000830 //        SPACE=(TRK,(1,1,0)),                                          
+ 000840 //        DCB=WPR036.OCT23.GDGM5                                        
+ 000900 //SYSIN   DD DUMMY                                                      
+ 001000 //SYSPRINT DD SYSOUT=*                                                  
+ 001100 //STEP2    EXEC PGM=IEBGENER                                            
+ 001200 //SYSUT1  DD   DSN=WPR036.OCT23.PS4(0),                                 
+ 001300 //           DISP=(OLD,CATLG,CATLG)
+ 001600 //SYSUT2  DD   DSN=WPR036.OCT23.PS4(+2),                                
+ 001700 //        DISP=(NEW,CATLG,CATLG),                                       
+ 001800 //       SPACE=(TRK,(1,1,0)),                                           
+ 001900 //        DCB=WPR036.OCT23.GDGM5                                        
+ 002000 //SYSIN    DD DUMMY                                                     
+ 002100 //SYSPRINT DD SYSOUT=*                                                  
+ 002200 //STEP3    EXEC PGM=IEBGENER                                            
+ 002300 //SYSUT1  DD   DSN=WPR036.OCT23.PS4(+1),                                
+ 002400 //         DISP=(OLD,CATLG,CATLG)                                       
+ 002700 //SYSUT2  DD   DSN=WPR036.OCT23.PS4(+3),                                
+ 002800 //       DISP=(NEW,CATLG,CATLG),                                        
+ 002900 //      SPACE=(TRK,(1,1,0)),                                            
+ 003000 //       DCB=WPR036.OCT23.GDGM5                                         
+ 003100 //SYSIN    DD DUMMY                                                     
+ 003200 //SYSPRINT DD SYSOUT=*                                                  
+ ****** **************************** Bottom of Data ****************************
+ 

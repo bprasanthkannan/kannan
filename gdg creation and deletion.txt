@@ -1,0 +1,32 @@
+ //WPR045A  JOB 12,BP,NOTIFY=WPR045,CLASS=A                   
+ //STEP1    EXEC PGM=IDCAMS                                   
+ //SYSIN    DD *                                              
+   DEFINE GDG(NAME(WPR045.OCT23.JCLPGM5)-                     
+   LIMIT(10)-                                                 
+   NOEMPTY -                                                  
+   SCRATCH)                                                   
+ /*                                                           
+ //SYSPRINT DD SYSOUT=*                                       
+ //STEP2   EXEC PGM=IEFBR14                                   
+ //DSCB DD DSN=WPR045.OCT23.JCLPGM5,                          
+ //        DISP=(NEW,CATLG,CATLG),                            
+ //        SPACE=(TRK,(1,1,3)),                               
+ //        DCB=(RECFM=FB,LRECL=80,BLKSIZE=800)                
+
+
+creation of generation
+
+//WPR045A JOB 12,BP,NOTIFY=WPR045,CLASS=A            
+//STEP1   EXEC PGM=IEFBR14                           
+//DD1     DD DSN=WPR045.OCT23.JCLPGM5(+1),           
+//        DISP=(NEW,CATLG,CATLG),                    
+//        SPACE=(TRK,(1,1)),                         
+//        DCB=(RECFM=FB,LRECL=80,BLKSIZE=800)        
+
+
+//WPR045A JOB 12,BP,NOTIFY=WPPR045,CLASS=A   
+//STEP1   EXEC PGM=IEFBR14                   
+//DD1     DD DSN=WPR045.OCT23.JCLPGM5(0),    
+//        DISP=(OLD,DELETE,DELETE)           
+
+
