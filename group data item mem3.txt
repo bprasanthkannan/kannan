@@ -1,0 +1,15 @@
+       IDENTIFICATION DIVISION.                 
+       PROGRAM-ID. MEM3.                        
+       ENVIRONMENT DIVISION.                    
+       DATA DIVISION.                           
+       WORKING-STORAGE SECTION.                 
+       01 STUDENTDETAIL.                        
+          02 SNO PIC 99.                        
+          02 SNA PIC A(25).                     
+          02 M1  PIC 99.                        
+          02 M2  PIC 99.                        
+       PROCEDURE DIVISION.                      
+           ACCEPT SN0.                          
+           ACCEPT SNA.                          
+           DISPLAY STUDENTDETAIL.               
+           STOP RUN.                            

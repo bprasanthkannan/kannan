@@ -1,0 +1,10 @@
+       IDENTIFICATION DIVISION.           
+       PROGRAM-ID. MEM1.                  
+       ENVIRONMENT DIVISION.              
+       DATA DIVISION.                     
+       WORKING-STORAGE SECTION.           
+       77 WS-TEMP PIC 9(3) VALUE 735.     
+       PROCEDURE DIVISION.                
+           DISPLAY "WELCOME".             
+           DISPLAY WS-TEMP.               
+           STOP RUN.                      

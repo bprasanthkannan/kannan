@@ -1,0 +1,13 @@
+       IDENTIFICATION DIVISION.        
+       PROGRAM-ID. MEM7.               
+       ENVIRONMENT DIVISION.           
+       DATA DIVISION.                  
+       WORKING-STORAGE SECTION.        
+       77 A PIC 9999 COMP-3.           
+       77 B PIC 999 COMP-3.            
+       PROCEDURE DIVISION.             
+           MOVE 89 TO A.               
+           MOVE 56 TO B.               
+           DISPLAY A.                  
+           DISPLAY B.                  
+           STOP RUN.                   

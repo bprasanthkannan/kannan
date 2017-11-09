@@ -1,0 +1,29 @@
+       IDENTIFICATION DIVISION.                             
+       PROGRAM-ID. MEM11.                                   
+       ENVIRONMENT DIVISION.                                
+       DATA DIVISION.                                       
+       WORKING-STORAGE SECTION.                             
+       77 M1 PIC 99 VALUE 87.                               
+       77 M2 PIC 99 VALUE 79.                               
+       77 M3 PIC 99 VALUE 44.                               
+       77 TOT PIC 999.                                      
+       77 AVG PIC 99.99.                                    
+       PROCEDURE DIVISION.                                  
+           COMPUTE TOT = ( M1 + M2 + M3 ).                  
+           COMPUTE AVG ROUNDED = TOT / 3.                   
+           IF M1 > 45 AND M2 > 45 AND M3 > 45               
+             IF AVG >80                                     
+              DISPLAY "GRADE 1"                              
+             ELSE                                            
+              IF AVG > 60                                    
+               DISPLAY "GRADE 2"                             
+              ELSE                                           
+                DISPLAY "PASS"                               
+              END-IF                                         
+             END-IF                                          
+           ELSE                                              
+            DISPLAY "FAIL"                                   
+           END-IF.                                           
+           DISPLAY AVG.                                      
+           DISPLAY TOT.                                      
+           STOP RUN.                                         

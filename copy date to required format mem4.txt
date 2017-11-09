@@ -1,0 +1,21 @@
+       IDENTIFICATION DIVISION.                 
+       PROGRAM-ID. MEM4.                        
+       ENVIRONMENT DIVISION.                    
+       DATA DIVISION.                           
+       WORKING-STORAGE SECTION.                 
+       01 DATE1.                                
+         02 YEAR PIC 9(4).                      
+         02 MONT PIC 9(2).                      
+         02 DAYS PIC 9(2).                      
+       01 DATE2.                                
+         02 DAYS PIC 9(2).                      
+         02 FILLER PIC X(2) VALUE '/'.          
+         02 MONT PIC 9(2).                      
+         02 FILLER PIC X(2) VALUE '/'.          
+         02 YEAR PIC 9(4).                      
+       PROCEDURE DIVISION.                      
+           ACCEPT DATE1 FROM DATE YYYYMMDD.     
+           MOVE CORR DATE1 TO DATE2.            
+           DISPLAY DATE1.                       
+           DISPLAY DATE2.                       
+           STOP RUN.                            

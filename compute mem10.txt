@@ -1,0 +1,23 @@
+       IDENTIFICATION DIVISION.               
+       PROGRAM-ID. MEM10.                     
+       ENVIRONMENT DIVISION.                  
+       DATA DIVISION.                         
+       WORKING-STORAGE SECTION.               
+       77 C PIC 999V99.                       
+       77 F PIC 999V99.                       
+       77 S PIC 999V99.                       
+       77 R PIC 999V99.                       
+       77 P PIC 999V99.                       
+       77 N PIC 999V99.                       
+       77 A PIC 999V99.                       
+       PROCEDURE DIVISION.                    
+           MOVE 35 TO C.                      
+           MOVE 105 TO F.                     
+           MOVE 100 TO P.  
+           MOVE 5 TO N.                             
+           MOVE 2 TO R.                             
+           COMPUTE S = 35 * 9 / 5 + 32.             
+           COMPUTE A = ( P * R * N ) / 100.         
+           DISPLAY S.                               
+           DISPLAY A.                               
+           STOP RUN.                                                   

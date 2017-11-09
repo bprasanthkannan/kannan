@@ -1,0 +1,30 @@
+      DISPLAY AVG.   
+      DISPLAY TOT.   
+                     
+       IDENTIFICATION DIVISION.                               
+       PROGRAM-ID. MEM13.                                     
+       ENVIRONMENT DIVISION.                                  
+       DATA DIVISION.                                         
+       WORKING-STORAGE SECTION.                               
+       77 P PIC 99 VALUE 13.                                  
+       77 N PIC 99.                                           
+       77 I PIC 99.                                           
+       77 Q PIC 99.                                           
+       77 R PIC 99.                                           
+       77 F PIC 99 VALUE 1.                                   
+       PROCEDURE DIVISION.                                    
+           COMPUTE N = P / 2.                                 
+           DISPLAY N.                                         
+           PERFORM PARA1 VARYING I FROM 2 BY 1 UNTIL I > N.   
+           IF F EQUAL 1                                       
+           DISPLAY "PRIME"                             
+          ELSE                                         
+           DISPLAY " NOT A PRIME"                      
+          END-IF.                                      
+          STOP RUN.                                    
+      PARA1.                                           
+          DIVIDE P BY I GIVING Q REMAINDER R.          
+          DISPLAY R.                                   
+          IF R EQUAL 0                                 
+           ADD 1 TO F                                  
+          END-IF.                                      

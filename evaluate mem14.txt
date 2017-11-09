@@ -1,0 +1,23 @@
+       IDENTIFICATION DIVISION.                               
+       PROGRAM-ID. MEM14.                                     
+       ENVIRONMENT DIVISION.                                  
+       DATA DIVISION.                                         
+       WORKING-STORAGE SECTION.                               
+       77 C PIC 9.                                            
+       77 A PIC 99 VALUE 20.                                  
+       77 B PIC 99 VALUE 50.                                  
+       77 D PIC 99.                                           
+       77 E PIC 99.                                           
+       PROCEDURE DIVISION.                                    
+           ACCEPT C.                                          
+           EVALUATE C                                         
+            WHEN 1                                            
+            ADD A TO B GIVING D                               
+            DISPLAY D                                         
+             WHEN 2                               
+             SUBTRACT A FROM B GIVING E           
+             DISPLAY E                            
+             WHEN OTHER                           
+             DISPLAY "OUT OF CHOICE"              
+             END-EVALUATE.                        
+             STOP RUN.                            

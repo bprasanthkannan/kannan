@@ -1,0 +1,13 @@
+       IDENTIFICATION DIVISION.               
+       PROGRAM-ID. MEM2.                      
+       ENVIRONMENT DIVISION.                  
+       DATA DIVISION.                         
+       WORKING-STORAGE SECTION.               
+       77 WS-TEMP PIC X(25).                  
+       77 WS-A    PIC 9(2).                   
+       PROCEDURE DIVISION.                    
+           ACCEPT WS-TEMP.                    
+           ACCEPT WS-A.                       
+           DISPLAY WS-TEMP.                   
+           DISPLAY WS-A.                      
+           STOP RUN.                          

@@ -1,0 +1,17 @@
+       IDENTIFICATION DIVISION.                                         
+       PROGRAM-ID. MEM9.                                                
+       ENVIRONMENT DIVISION.                                            
+       DATA DIVISION.                                                   
+       WORKING-STORAGE SECTION.                                         
+       77 A PIC 99  VALUE 10.                                           
+       77 B PIC 99V9  VALUE 0.20.                                       
+       77 C PIC 99V9(2).                                                
+       77 D PIC 99.                                                     
+       77 E PIC 9(3).                                                   
+       77 F PIC 9(3).                                                   
+       PROCEDURE DIVISION.                                              
+           ADD A TO B GIVING C ROUNDED.                                 
+           SUBTRACT A FROM B GIVING D.                                  
+           DISPLAY C.                                                   
+           DISPLAY D.                                                   
+           stop run.

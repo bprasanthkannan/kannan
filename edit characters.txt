@@ -1,0 +1,46 @@
+       IDENTIFICATION DIVISION.                       
+       PROGRAM-ID. MEM6.                              
+       ENVIRONMENT DIVISION.                          
+       DATA DIVISION.                                 
+       WORKING-STORAGE SECTION.                       
+       77 A PIC ZZ9999.                               
+       77 B PIC $ZZ999.                               
+       77 C PIC **9999.                               
+       77 D PIC -Z999.                                
+       77 E PIC +$999.                                
+       77 F PIC 99/99.                                
+       77 G PIC 999.99.                               
+       77 H PIC ZZZ.                                  
+       77 I PIC 999,99.                               
+       PROCEDURE DIVISION.                            
+           MOVE 962 TO A.                       
+           MOVE 9625 TO B.                      
+           MOVE 968 TO C.                       
+           MOVE -89 TO D.                       
+           MOVE -85 TO E.                       
+           MOVE 789 TO F.                       
+           MOVE 89.56 TO G.                     
+           MOVE 0 TO H.                         
+           MOVE 9635 TO I.                      
+           DISPLAY A.                           
+           DISPLAY B.                           
+           DISPLAY C.                           
+           DISPLAY D.                           
+           DISPLAY E.                           
+           DISPLAY F.                           
+           DISPLAY G.                           
+           DISPLAY H.                              
+           DISPLAY I.                              
+           STOP RUN.                               
+                                                   
+
+**********
+  0962    
+$ 9625    
+**0968    
+- 089     
+-$085     
+07/89     
+089.56    
+          
+096,35    
